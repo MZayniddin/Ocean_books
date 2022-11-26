@@ -1,0 +1,7 @@
+.hero {
+  height: 550px;
+  background-image: url("../../assets/images/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
