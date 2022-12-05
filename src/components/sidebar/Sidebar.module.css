@@ -1,0 +1,35 @@
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  padding: 10px 25px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 101;
+  transition: 0.5s ease-in-out;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-title {
+  text-align: start;
+}
+.sidebar-category-list {
+  padding: 10px 0px;
+}
+
+.category-list__item {
+  padding: 8px 0;
+}
+
+.category-list__link {
+  color: var(--black-c);
+}
+
+.category-list__link:hover {
+  color: red;
+}

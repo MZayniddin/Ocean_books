@@ -1,0 +1,30 @@
+.book-card {
+  max-width: 266px;
+  width: 100%;
+}
+
+.book-card-img {
+  width: 100%;
+  height: 365px;
+  object-fit: cover;
+}
+
+.book-card-title {
+  font-family: var(--ff-Playfair);
+  display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px 0px;
+}
+
+.book-card-about {
+  padding: 10px;
+}
+
+.book-card-about li {
+  padding: 6px 0px;
+}

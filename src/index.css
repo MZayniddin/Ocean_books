@@ -10,8 +10,11 @@
   --ff-openSans: "Open Sans", sans-serif;
   --ff-Playfair: "Playfair Display", serif;
   --fz-24: 24px;
+  --fz-18: 18px;
   --fw-700: 700;
   --white-c: #ffffff;
+  --black-c: #000000;
+  --light-blue-c: #8de9ed;
 }
 
 html,
@@ -24,8 +27,13 @@ a {
   text-decoration: none;
 }
 
+ul, ol {
+  list-style-type: none;
+}
+
 button {
   cursor: pointer;
+  background-color: transparent;
 }
 
 @font-face {
