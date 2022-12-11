@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import c from "./BookCard.module.css";
 
-const BookCard = ({ name, author, year, language, image }) => {
+const BookCard = ({ id, name, author, year, language, image }) => {
   const whichLangBook = text => {
     if(text === "EN"){
       return "English"
@@ -14,7 +14,7 @@ const BookCard = ({ name, author, year, language, image }) => {
   }
   return (
     <div className={c["book-card"]}>
-      <Link to="/">
+      <Link to={`/detail/${id}`}>
         <img
           src={image}
           alt="This is cover of book"
