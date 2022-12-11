@@ -25,13 +25,13 @@ const BookCard = ({ id, name, author, year, language, image }) => {
       <div className={c["book-card-about"]}>
         <ul>
           <li>
-            <strong>Avtor:</strong> {author}
+            <strong>Muallif:</strong> {author}
           </li>
           <li>
-            <strong>Yili:</strong> {year}
+            <strong>Chop etilgan yil:</strong> {year}
           </li>
           <li>
-            <strong>Tili:</strong> {whichLangBook(language)}
+            <strong>Til:</strong> {whichLangBook(language)}
           </li>
         </ul>
       </div>

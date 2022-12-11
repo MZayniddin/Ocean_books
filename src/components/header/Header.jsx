@@ -13,7 +13,7 @@ export default function Header({setIsSidebarActive, isSidebarActive}){
       if (window.scrollY > 120){
         navbar.current.style.background = "#141414"
       }else {
-        navbar.current.style.background = "transparent"
+        navbar.current.style.background = "#000"
       }
     }
   }, [])
