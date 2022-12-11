@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container">
         <div className={c["footer-info"]}>
           <div>
-            <strong className={c["footer-info-title"]}>Information</strong>
+            <strong className={c["footer-info-title"]}>Ma'lumot</strong>
             <ul>
               <li className={c["footer-info__list-item"]}>
                 <Link className={c["footer-info-link"]} to="/about">
@@ -28,7 +28,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <strong className={c["footer-info-title"]}>Contact Us</strong>
+            <strong className={c["footer-info-title"]}>Biz bilan bog'laning</strong>
             <ul>
               <li className={c["footer-info__list-item"]}>
                 <a href="tel:+998998895989" className={c["footer-info-link"]}>
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
           <div>
             <strong className={c["footer-info-title"]}>
-              Our Social Networks
+              Bizning ijtimoiy tarmoqlar
             </strong>
             <div className={c["social-networks"]}>
               <a className={c.telegram} href="t.me/Asatullayev" target="_blank" rel="noreferrer">

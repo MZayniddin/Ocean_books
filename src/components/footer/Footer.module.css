@@ -29,7 +29,7 @@
 
 .social-networks {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .social-networks a {
