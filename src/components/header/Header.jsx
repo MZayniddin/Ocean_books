@@ -7,10 +7,7 @@ import { HiOutlineSearch } from 'react-icons/hi'
 export default function Header({setIsSidebarActive, isSidebarActive}){
   const navbar = useRef();
   const [isSearchClicked, setIsSearchClicked] = useState(false)
-  useState(()=>{
-    fetch("http://127.0.0.1:8000/main/v2/categries/category/2")
-    .then(request => request.json()).then(data => console.log(data))
-  },[]) 
+
   useEffect(() => {
     window.onscroll = () => {
       if (window.scrollY > 120){

@@ -21,8 +21,15 @@ const Main = () => {
 
       <section className="books">
         <div className="container">
-          {booksArr.map(({ id, name, author__name, year, language }) => (
-            <BookCard key={id} name={name} author={author__name} year={year} language={language} />
+          {booksArr.map(({ id, name, author__name, year, language, image }) => (
+            <BookCard
+              key={id}
+              name={name}
+              author={author__name}
+              year={year}
+              language={language}
+              image={image}
+            />
           ))}
         </div>
       </section>

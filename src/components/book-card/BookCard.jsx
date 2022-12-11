@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import c from "./BookCard.module.css";
 
-const BookCard = ({ name, author, year, language }) => {
+const BookCard = ({ name, author, year, language, image }) => {
   const whichLangBook = text => {
     if(text === "EN"){
       return "English"
@@ -16,7 +16,7 @@ const BookCard = ({ name, author, year, language }) => {
     <div className={c["book-card"]}>
       <Link to="/">
         <img
-          src="https://via.placeholder.com/266x365"
+          src={image}
           alt="This is cover of book"
           className={c["book-card-img"]}
         />
@@ -25,13 +25,13 @@ const BookCard = ({ name, author, year, language }) => {
       <div className={c["book-card-about"]}>
         <ul>
           <li>
-            <strong>Author:</strong> {author}
+            <strong>Avtor:</strong> {author}
           </li>
           <li>
-            <strong>Year:</strong> {year}
+            <strong>Yili:</strong> {year}
           </li>
           <li>
-            <strong>Language:</strong> {whichLangBook(language)}
+            <strong>Tili:</strong> {whichLangBook(language)}
           </li>
         </ul>
       </div>

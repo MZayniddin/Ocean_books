@@ -8,13 +8,13 @@ const Sidebar = ({isSidebarActive, setIsSidebarActive}) => {
   useEffect(()=>{
     fetch("http://127.0.0.1:8000/main/v2/categries/category/")
     .then(response => response.json())
-    .then(data => setCategoryArr(data.results))
+    .then(data => setCategoryArr(data))
     .catch(error => console.log(error))
   },[])
 
   return (
     <div className={isSidebarActive ? `${c.sidebar} ${c.open}` : c["sidebar"]}>
-      <h2 className={c["sidebar-title"]}>Categories</h2>
+      <h2 className={c["sidebar-title"]}>Kategoriyalar</h2>
       
       <div className={c["sidebar-category-list"]}>
         <ul>

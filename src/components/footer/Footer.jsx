@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
         <div className={c["footer-text"]}>
         <p>
-          2022 Internet-shop oceanbooks.uz: We can give you opportunity download Online Books faster and with higher quality only with me. All rights reserved.
+          2022 © Internet-shop oceanbooks.uz: We can give you opportunity download Online Books faster and with higher quality only with me. All rights reserved.
         </p>
       </div>
       </div>
