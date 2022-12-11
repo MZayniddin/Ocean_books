@@ -6,7 +6,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import { Overlay } from './utils';
 
 function App() {
-  const [isSidebarActive, setIsSidebarActive] = useState(false)
+  const [isSidebarActive, setIsSidebarActive] = useState(false);
 
   return (
     <div>

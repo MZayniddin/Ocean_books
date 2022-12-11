@@ -13,8 +13,6 @@ const Main = () => {
       .catch((error) => console.log(error));
   }, []);
 
-  console.log(booksArr);
-
   return (
     <main>
       <Hero />

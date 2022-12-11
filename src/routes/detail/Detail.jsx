@@ -38,7 +38,7 @@ const Detail = () => {
               <strong>Til:</strong> {singleBookData?.language}
             </p>
             <p>
-              <strong>Kategoriya:</strong> {singleBookData?.category[0]?.name}
+              <strong>Kategoriya:</strong> {singleBookData?.category?.[0]?.name}
             </p>
             <p>
               <strong>Chop etilgan yil:</strong> {singleBookData?.year}
