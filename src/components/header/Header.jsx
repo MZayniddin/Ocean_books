@@ -9,7 +9,7 @@ export default function Header({ setIsSidebarActive, isSidebarActive }) {
   const [isSearchClicked, setIsSearchClicked] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [searchResult, setSearchResult] = useState([]);
-  console.log(searchInput);
+  const [isResutDivActive, setResutDivActive] = useState(false);
 
   useEffect(() => {
     window.onscroll = () => {
@@ -55,6 +55,8 @@ export default function Header({ setIsSidebarActive, isSidebarActive }) {
             }}
           >
             <input
+              onFocus={()=>{setResutDivActive(true)}}
+              onBlur={()=>{setResutDivActive(false)}}
               type="text"
               className={c.searchbar__input}
               placeholder="Search..."
@@ -64,7 +66,7 @@ export default function Header({ setIsSidebarActive, isSidebarActive }) {
               <HiOutlineSearch className={c["search-icon"]} />
             </button>
           </form>
-          <div style={searchInput.length === 0 ? {display: "none"} : {display: "block"}} className={c["header__search-result"]}>
+          <div style={isResutDivActive ? {display: "block"} : {display: "none"}} className={c["header__search-result"]}>
             <ul>
             {
               searchResult.map(book => 
