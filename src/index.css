@@ -258,3 +258,16 @@ button {
   padding: 0 40px;
   margin: 0 auto;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}

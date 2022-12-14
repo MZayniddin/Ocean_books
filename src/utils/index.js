@@ -6,7 +6,6 @@ import './index.css';
 
 const BacktoTop = () => {
   const { pathname } = useLocation();
-  console.log(pathname)
   const scrollToTop = () =>{
     window.scrollTo(0, 0)
   }
