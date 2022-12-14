@@ -1,0 +1,16 @@
+.about {
+  padding: 90px 0 2rem;
+}
+
+.about-title {
+  font-size: 30px;
+}
+
+.about p, ol {
+  margin-bottom: 1rem;
+}
+
+.about ol {
+  padding-inline-start: 40px;
+  list-style: decimal;
+}
