@@ -1,0 +1,27 @@
+.donate {
+  padding: 100px 2rem 2rem;
+}
+
+.donate p {
+  line-height: 26px;
+}
+
+.donate-type {
+  margin-top: 20px;
+}
+
+.donate-type > strong {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.donation-type {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.donation-type > span {
+  font-size: 24px;
+}

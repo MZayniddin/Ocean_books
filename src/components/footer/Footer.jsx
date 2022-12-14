@@ -21,7 +21,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className={c["footer-info__list-item"]}>
-                <Link className={c["footer-info-link"]} to="/user-agreement">
+                <Link className={c["footer-info-link"]} to="/donate">
                   Donate
                 </Link>
               </li>
