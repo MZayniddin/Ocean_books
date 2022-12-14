@@ -13,7 +13,6 @@ const Filter = () => {
     .then(response => response.json())
     .then(data => setResultArr(data))
   },[id])
-  console.log(resultArr);
   return (
     <div className={c["explore"]}>
       <div className="container">

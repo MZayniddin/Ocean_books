@@ -3,7 +3,7 @@ import Routes from './routes/index'
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Sidebar from './components/sidebar/Sidebar';
-import { Overlay } from './utils';
+import { BacktoTop, Overlay } from './utils';
 
 function App() {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
@@ -15,6 +15,7 @@ function App() {
       <Routes/>
       {isSidebarActive ? <Overlay setIsSidebarActive={setIsSidebarActive}/> : null}
       <Footer/>
+      <BacktoTop/>
     </div>
   );
 }

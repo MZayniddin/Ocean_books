@@ -17,12 +17,12 @@ const Footer = () => {
             <ul>
               <li className={c["footer-info__list-item"]}>
                 <Link className={c["footer-info-link"]} to="/about">
-                  About Us
+                  Biz haqimizda
                 </Link>
               </li>
               <li className={c["footer-info__list-item"]}>
                 <Link className={c["footer-info-link"]} to="/user-agreement">
-                  User agreement
+                  Donate
                 </Link>
               </li>
             </ul>
@@ -31,16 +31,21 @@ const Footer = () => {
             <strong className={c["footer-info-title"]}>Biz bilan bog'laning</strong>
             <ul>
               <li className={c["footer-info__list-item"]}>
-                <a href="tel:+998998895989" className={c["footer-info-link"]}>
-                  +998 99 889 59 89
+                <a href="tel:+998338835383" className={c["footer-info-link"]}>
+                +998 33 883 53 83
+                </a>
+              </li>
+              <li className={c["footer-info__list-item"]}>
+                <a href="tel:+998970077007" className={c["footer-info-link"]}>
+                +998 97 007 70 07
                 </a>
               </li>
               <li className={c["footer-info__list-item"]}>
                 <a
-                  href="mailto:asatullayevabduraxmon@gmail.com"
+                  href="mailto:oceanbooksuz@gmail.com"
                   className={c["footer-info-link"]}
                 >
-                  asatullayevabduraxmon@gmail.com
+                  oceanbooksuz@gmail.com
                 </a>
               </li>
             </ul>
@@ -50,7 +55,7 @@ const Footer = () => {
               Bizning ijtimoiy tarmoqlar
             </strong>
             <div className={c["social-networks"]}>
-              <a className={c.telegram} href="t.me/Asatullayev" target="_blank" rel="noreferrer">
+              <a className={c.telegram} href="https://t.me/kiut_official" target="_blank" rel="noreferrer">
                 <FaTelegram/>
               </a>
               <a className={c.instagram} href="https://www.instagram.com/world_record_egg/" target="_blank" rel="noreferrer">
