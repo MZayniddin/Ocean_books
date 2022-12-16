@@ -21,14 +21,17 @@ export default function Header({ setIsSidebarActive, isSidebarActive }) {
     };
   }, []);
 
-  useEffect(()=>{
-    if(searchInput.length !== 0 ){
-      fetch(`http://localhost:8000/main/v1/products/list/?search=${searchInput}`)
-      .then(response => response.json())
-      .then(data => setSearchResult(data))
-      .catch(error => console.error(error))
+  useEffect(() => {
+    if (searchInput.length !== 0) {
+      fetch(
+        `http://localhost:8000/main/v1/products/list/?search=${searchInput}`
+      )
+        .then((response) => response.json())
+        .then((data) => setSearchResult(data))
+        .catch((error) => console.error(error));
     }
-  },[searchInput])
+  }, [searchInput]);
+  console.log(searchResult);
 
   return (
     <header className={c.header} ref={navbar}>
@@ -39,7 +42,15 @@ export default function Header({ setIsSidebarActive, isSidebarActive }) {
         </Link>
       </div>
       <div className={c.header__tools}>
-        <div className={c.header__search}>
+        <div
+          onMouseOver={() => {
+            setResutDivActive(true);
+          }}
+          onMouseLeave={() => {
+            setResutDivActive(false);
+          }}
+          className={c.header__search}
+        >
           <form
             className={c.header__searchbar}
             onClick={() => {
@@ -55,37 +66,51 @@ export default function Header({ setIsSidebarActive, isSidebarActive }) {
             }}
           >
             <input
-              onFocus={()=>{setResutDivActive(true)}}
-              onBlur={()=>{setResutDivActive(false)}}
               type="text"
               className={c.searchbar__input}
-              placeholder="Search..."
-              onChange={(e) => {setSearchInput(e.target.value)}}
+              placeholder="Qidiruv..."
+              onChange={(e) => {
+                setSearchInput(e.target.value);
+              }}
             />
             <button className={c.searchbar__button}>
               <HiOutlineSearch className={c["search-icon"]} />
             </button>
           </form>
-          <div style={isResutDivActive ? {display: "block"} : {display: "none"}} className={c["header__search-result"]}>
+          <div
+            style={
+              searchInput.length >= 1 && isResutDivActive
+                ? { display: "block" }
+                : { display: "none" }
+            }
+            className={c["header__search-result"]}
+          >
             <ul>
-            {
-              searchResult.map(book => 
-                <li key={book.id}>
+              {searchResult.map((book) => (
+                <li
+                  onClick={() => {
+                    console.log("Clicked");
+                  }}
+                  key={book.id}
+                >
                   <Link to={`/detail/${book.id}`}>
                     <img src={book.image} alt="" />
                     <div className={c["book-info"]}>
-                      <div className={c["book-title"]}>
-                        {book.name}
-                      </div>
+                      <div className={c["book-title"]}>{book.name}</div>
                       <span>{book.author.name}</span>
                     </div>
                   </Link>
                 </li>
-              )
-            }
-            <li style={searchResult.length === 0 ? {display: "block"} : {display: "none"}}>
-              <div>Hech narsa topilmadi</div>
-            </li>
+              ))}
+              <li
+                style={
+                  searchInput.length > 1 && searchResult.length === 0
+                    ? { display: "block" }
+                    : { display: "none" }
+                }
+              >
+                <div>Hech narsa topilmadi</div>
+              </li>
             </ul>
           </div>
         </div>
