@@ -20,7 +20,7 @@ const Detail = () => {
       <div className="container">
         <div className={c["detail-inner"]}>
           <div className={c["book-img__wrap"]}>
-            <img src={singleBookData?.image} alt="Abdurahmon kemayapti" />
+            <img src={singleBookData?.image} alt="img of book" />
           </div>
           <div className={c["book-description"]}>
             <h2 className={c["book-name"]}>{singleBookData?.name}</h2>
